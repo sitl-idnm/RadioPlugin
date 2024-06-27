@@ -2440,6 +2440,7 @@ function wp_radio_get_related_stations( $post_id )
             $item['id'] = $post_id;
             $item['title'] = get_the_title( $post_id );
             $item['slogan'] = wp_radio_get_meta( $post_id, 'slogan' );
+            $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
             $item['content'] = get_post_field( 'post_content', $post_id );
             $item['link'] = get_the_permalink( $post_id );
             $item['thumbnail'] = wp_radio_get_meta( $post_id, 'logo', WP_RADIO_ASSETS . '/images/placeholder.jpg' );
@@ -2449,7 +2450,6 @@ function wp_radio_get_related_stations( $post_id )
             $item['website'] = wp_radio_get_meta( $post_id, 'website' );
             $item['facebook'] = wp_radio_get_meta( $post_id, 'facebook' );
             $item['twitter'] = wp_radio_get_meta( $post_id, 'twitter' );
-            $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
             $item['wikipedia'] = wp_radio_get_meta( $post_id, 'wikipedia' );
             $item['contacts'] = array_filter( [
                 'Address' => wp_radio_get_meta( $post_id, 'address' ),
@@ -2506,6 +2506,7 @@ function wp_radio_get_station_data( $post_id )
     $item['title'] = $title;
     $item['content'] = $content;
     $item['slogan'] = wp_radio_get_meta( $post_id, 'slogan' );
+    $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
     $item['link'] = get_the_permalink( $post_id );
     $item['thumbnail'] = wp_radio_get_meta( $post_id, 'logo', WP_RADIO_ASSETS . '/images/placeholder.jpg' );
     $item['stream'] = apply_filters( 'wp_radio/stream_url', wp_radio_get_meta( $post_id, 'stream_url' ), $post_id );
@@ -2514,7 +2515,6 @@ function wp_radio_get_station_data( $post_id )
     $item['website'] = wp_radio_get_meta( $post_id, 'website' );
     $item['facebook'] = wp_radio_get_meta( $post_id, 'facebook' );
     $item['twitter'] = wp_radio_get_meta( $post_id, 'twitter' );
-    $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
     $item['wikipedia'] = wp_radio_get_meta( $post_id, 'wikipedia' );
     $item['contacts'] = array_filter( [
         'Address' => wp_radio_get_meta( $post_id, 'address' ),

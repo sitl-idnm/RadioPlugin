@@ -124,7 +124,7 @@ _e( 'Enter the station slogan.', 'wp-radio' );
                  <!-- Station  Rate -->
                  <tr>
                     <th scope="row">
-                        <label for="trate"><?php 
+                        <label for="rate"><?php 
 esc_html_e( 'Station rate', 'wp-radio' );
 ?></label>
                     </th>

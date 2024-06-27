@@ -93,6 +93,7 @@ class WP_Radio_Importer {
 			'id'           => '',
 			'name'         => '',
 			'slogan'       => '',
+			'rate'     	   => '',
 			'src'          => '',
 			'description'  => '',
 			'logo'         => '',
@@ -103,7 +104,6 @@ class WP_Radio_Importer {
 			'website'      => '',
 			'facebook'     => '',
 			'twitter'      => '',
-			'rate'     	   => '',
 			'wikipedia'    => '',
 			'address'      => '',
 			'phone'        => '',
@@ -131,6 +131,7 @@ class WP_Radio_Importer {
 
 		$meta_input = array(
 			'slogan'     => sanitize_text_field( $station['slogan'] ),
+			'rate'   => sanitize_text_field( $station['rate'] ),
 			'stream_url' => esc_url( $station['src'] ),
 			'logo'       => esc_url( $station['logo'] ),
 			'frequency'  => sanitize_text_field( $station['frequency'] ),
@@ -140,7 +141,6 @@ class WP_Radio_Importer {
 			'website'   => esc_url( $station['website'] ),
 			'facebook'  => esc_url( $station['facebook'] ),
 			'twitter'   => esc_url( $station['twitter'] ),
-			'rate'   => esc_url( $station['rate'] ),
 			'wikipedia' => esc_url( $station['wikipedia'] ),
 
 			'address' => sanitize_textarea_field( $station['address'] ),

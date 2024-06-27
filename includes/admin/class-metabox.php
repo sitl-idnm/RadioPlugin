@@ -46,13 +46,13 @@ class WP_Radio_Metabox {
 			'logo'       => ! empty( $_POST['logo'] ) ? esc_url( $_POST['logo'] ) : '',
 			'stream_url' => ! empty( $_POST['stream_url'] ) ? esc_url( $_POST['stream_url'] ) : '',
 			'slogan'     => ! empty( $_POST['slogan'] ) ? sanitize_text_field( $_POST['slogan'] ) : '',
+			'rate'   => ! empty( $_POST['rate'] ) ? sanitize_text_field( $_POST['rate'] ) : '',
 			'featured'   => ! empty( $_POST['featured'] ) ? sanitize_text_field( $_POST['featured'] ) : '',
 			'popup'      => ! empty( $_POST['popup'] ) ? sanitize_text_field( $_POST['popup'] ) : '',
 
 			'website'   => ! empty( $_POST['website'] ) ? esc_url( $_POST['website'] ) : '',
 			'facebook'  => ! empty( $_POST['facebook'] ) ? esc_url( $_POST['facebook'] ) : '',
 			'twitter'   => ! empty( $_POST['twitter'] ) ? esc_url( $_POST['twitter'] ) : '',
-			'rate'   => ! empty( $_POST['rate'] ) ? esc_url( $_POST['rate'] ) : '',
 			'wikipedia' => ! empty( $_POST['wikipedia'] ) ? esc_url( $_POST['wikipedia'] ) : '',
 
 			'address' => ! empty( $_POST['address'] ) ? sanitize_textarea_field( $_POST['address'] ) : '',

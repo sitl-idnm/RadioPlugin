@@ -11,8 +11,7 @@ $searchGenre   = ! empty( $_GET['genre'] ) ? intval( $_GET['genre'] ) : '';
 $paginate = ! empty( $_GET['paginate'] ) ? intval( $_GET['paginate'] ) : 1;
 $per_page = ! empty( $_GET['perpage'] ) ? intval( $_GET['perpage'] ) : wp_radio_get_settings( 'posts_per_page', 20 );
 
-$sort = ! empty( $_GET['sort'] ) ? sanitize_key( $_GET['sort'] )
-	: wp_radio_get_settings( 'listing_order', 'asc' );
+$sort = ! empty( $_GET['sort'] ) ? sanitize_key( $_GET['sort'] ) : wp_radio_get_settings( 'listing_order', 'asc' );
 
 $is_grid = 'grid' == wp_radio_get_settings( 'listing_view', 'list' );
 
@@ -114,6 +113,12 @@ if ( ! empty( $sort ) ) {
 
     $args['order']   = $sort;
     $args['orderby'] = $sortby;
+
+    // Если сортировка по rate, формируем SQL запрос для сортировки по метаполю
+    if ( 'rate_asc' == $sort || 'rate_desc' == $sort ) {
+        $order = $sort == 'rate_asc' ? 'ASC' : 'DESC';
+        $sort = "ORDER BY CAST(pm.meta_value AS DECIMAL(10,2)) $order LIMIT 1";
+    }
 }
 
 /** search query */

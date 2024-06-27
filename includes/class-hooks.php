@@ -113,6 +113,7 @@ class WP_Radio_Hooks {
 		global $post;
 	
 		if ( get_post_type( $post ) == 'wp_radio' ) {
+			$order = $sort == 'rate_asc' ? 'ASC' : 'DESC';
 			$sort = "ORDER BY CAST(pm.meta_value AS DECIMAL(10,2)) ASC LIMIT 1";
 		}
 	
@@ -143,6 +144,7 @@ class WP_Radio_Hooks {
 		global $post;
 	
 		if ( get_post_type( $post ) == 'wp_radio' ) {
+			$order = $sort == 'rate_asc' ? 'ASC' : 'DESC';
 			$sort = "ORDER BY CAST(pm.meta_value AS DECIMAL(10,2)) DESC LIMIT 1";
 		}
 	

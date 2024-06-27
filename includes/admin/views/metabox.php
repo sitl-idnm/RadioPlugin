@@ -120,6 +120,26 @@ _e( 'Enter the station slogan.', 'wp-radio' );
                     </td>
                 </tr>
 
+
+                 <!-- Station  Rate -->
+                 <tr>
+                    <th scope="row">
+                        <label for="trate"><?php 
+esc_html_e( 'Station rate', 'wp-radio' );
+?></label>
+                    </th>
+                    <td>
+                        <input name="rate" type="text" id="rate" value="<?php 
+echo  esc_url( $rate ) ;
+?>"
+                               class="regular-text ltr">
+                        <p class="description"><?php 
+_e( 'Enter the station rate of the station.', 'wp-radio' );
+?></p>
+                    </td>
+                </tr>
+
+
                 <!-- station logo-->
                 <tr>
                     <th scope="row">
@@ -267,26 +287,7 @@ _e( 'Enter the twitter url of the station.', 'wp-radio' );
                 </tr>
 
 
-                 <!-- Station  Rate -->
-                 <tr>
-                    <th scope="row">
-                        <label for="trate"><?php 
-esc_html_e( 'Station rate', 'wp-radio' );
-?></label>
-                    </th>
-                    <td>
-                        <input name="rate" type="text" id="rate" value="<?php 
-echo  esc_url( $rate ) ;
-?>"
-                               class="regular-text ltr">
-                        <p class="description"><?php 
-_e( 'Enter the station rate of the station.', 'wp-radio' );
-?></p>
-                    </td>
-                </tr>
-
-
-
+                
                 <!-- Station  Wikipedia URL -->
                 <tr>
                     <th scope="row">

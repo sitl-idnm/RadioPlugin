@@ -130,7 +130,7 @@ esc_html_e( 'Station rate', 'wp-radio' );
                     </th>
                     <td>
                         <input name="rate" type="text" id="rate" value="<?php 
-echo  esc_url( $rate ) ;
+echo  $rate ;
 ?>"
                                class="regular-text ltr">
                         <p class="description"><?php 

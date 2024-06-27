@@ -8,6 +8,7 @@ $featured = wp_radio_get_meta( $post_id, 'featured' );
 $website = wp_radio_get_meta( $post_id, 'website' );
 $facebook = wp_radio_get_meta( $post_id, 'facebook' );
 $twitter = wp_radio_get_meta( $post_id, 'twitter' );
+$rate = wp_radio_get_meta( $post_id, 'rate' );
 $wikipedia = wp_radio_get_meta( $post_id, 'wikipedia' );
 $address = wp_radio_get_meta( $post_id, 'address' );
 $email = wp_radio_get_meta( $post_id, 'email' );
@@ -264,6 +265,26 @@ _e( 'Enter the twitter url of the station.', 'wp-radio' );
 ?></p>
                     </td>
                 </tr>
+
+
+                 <!-- Station  Rate -->
+                 <tr>
+                    <th scope="row">
+                        <label for="trate"><?php 
+esc_html_e( 'Station rate', 'wp-radio' );
+?></label>
+                    </th>
+                    <td>
+                        <input name="rate" type="text" id="rate" value="<?php 
+echo  esc_url( $rate ) ;
+?>"
+                               class="regular-text ltr">
+                        <p class="description"><?php 
+_e( 'Enter the station rate of the station.', 'wp-radio' );
+?></p>
+                    </td>
+                </tr>
+
 
 
                 <!-- Station  Wikipedia URL -->

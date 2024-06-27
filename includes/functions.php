@@ -2449,6 +2449,7 @@ function wp_radio_get_related_stations( $post_id )
             $item['website'] = wp_radio_get_meta( $post_id, 'website' );
             $item['facebook'] = wp_radio_get_meta( $post_id, 'facebook' );
             $item['twitter'] = wp_radio_get_meta( $post_id, 'twitter' );
+            $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
             $item['wikipedia'] = wp_radio_get_meta( $post_id, 'wikipedia' );
             $item['contacts'] = array_filter( [
                 'Address' => wp_radio_get_meta( $post_id, 'address' ),
@@ -2513,6 +2514,7 @@ function wp_radio_get_station_data( $post_id )
     $item['website'] = wp_radio_get_meta( $post_id, 'website' );
     $item['facebook'] = wp_radio_get_meta( $post_id, 'facebook' );
     $item['twitter'] = wp_radio_get_meta( $post_id, 'twitter' );
+    $item['rate'] = wp_radio_get_meta( $post_id, 'rate' );
     $item['wikipedia'] = wp_radio_get_meta( $post_id, 'wikipedia' );
     $item['contacts'] = array_filter( [
         'Address' => wp_radio_get_meta( $post_id, 'address' ),

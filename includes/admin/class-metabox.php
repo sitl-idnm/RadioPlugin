@@ -52,6 +52,7 @@ class WP_Radio_Metabox {
 			'website'   => ! empty( $_POST['website'] ) ? esc_url( $_POST['website'] ) : '',
 			'facebook'  => ! empty( $_POST['facebook'] ) ? esc_url( $_POST['facebook'] ) : '',
 			'twitter'   => ! empty( $_POST['twitter'] ) ? esc_url( $_POST['twitter'] ) : '',
+			'rate'   => ! empty( $_POST['rate'] ) ? esc_url( $_POST['rate'] ) : '',
 			'wikipedia' => ! empty( $_POST['wikipedia'] ) ? esc_url( $_POST['wikipedia'] ) : '',
 
 			'address' => ! empty( $_POST['address'] ) ? sanitize_textarea_field( $_POST['address'] ) : '',

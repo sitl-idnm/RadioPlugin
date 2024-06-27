@@ -27,6 +27,7 @@ $stream = apply_filters( 'wp_radio/stream_url', wp_radio_get_meta( $post_id, 'st
 $website = wp_radio_get_meta( $post_id, 'website' );
 $facebook = wp_radio_get_meta( $post_id, 'facebook' );
 $twitter = wp_radio_get_meta( $post_id, 'twitter' );
+$rate = wp_radio_get_meta( $post_id, 'rate' );
 $wikipedia = wp_radio_get_meta( $post_id, 'wikipedia' );
 $email = wp_radio_get_meta( $post_id, 'email' );
 $phone = wp_radio_get_meta( $post_id, 'phone' );

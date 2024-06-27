@@ -103,6 +103,7 @@ class WP_Radio_Importer {
 			'website'      => '',
 			'facebook'     => '',
 			'twitter'      => '',
+			'rate'     	   => '',
 			'wikipedia'    => '',
 			'address'      => '',
 			'phone'        => '',
@@ -139,6 +140,7 @@ class WP_Radio_Importer {
 			'website'   => esc_url( $station['website'] ),
 			'facebook'  => esc_url( $station['facebook'] ),
 			'twitter'   => esc_url( $station['twitter'] ),
+			'rate'   => esc_url( $station['rate'] ),
 			'wikipedia' => esc_url( $station['wikipedia'] ),
 
 			'address' => sanitize_textarea_field( $station['address'] ),

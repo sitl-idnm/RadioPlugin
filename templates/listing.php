@@ -96,17 +96,24 @@ if ( ! empty( $per_page ) ) {
 
 /** listing sort */
 if ( ! empty( $sort ) ) {
-	$sortby = 'title';
-	if ( 'date_asc' == $sort ) {
-		$sortby = 'date';
-		$sort   = 'asc';
-	} elseif ( 'date_desc' == $sort ) {
-		$sortby = 'date';
-		$sort   = 'desc';
-	}
+    $sortby = 'title'; // Значение по умолчанию для сортировки
 
-	$args['order']   = $sort;
-	$args['orderby'] = $sortby;
+    if ( 'date_asc' == $sort ) {
+        $sortby = 'date';
+        $sort   = 'asc';
+    } elseif ( 'date_desc' == $sort ) {
+        $sortby = 'date';
+        $sort   = 'desc';
+    } elseif ( 'rate_asc' == $sort ) {
+        $sortby = 'rate';
+        $sort   = 'asc';
+    } elseif ( 'rate_desc' == $sort ) {
+        $sortby = 'rate';
+        $sort   = 'desc';
+    }
+
+    $args['order']   = $sort;
+    $args['orderby'] = $sortby;
 }
 
 /** search query */

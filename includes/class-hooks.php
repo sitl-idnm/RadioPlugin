@@ -111,10 +111,11 @@ class WP_Radio_Hooks {
 
 	public function next_post_sort( $sort ) {
 		global $post;
+	
 		if ( get_post_type( $post ) == 'wp_radio' ) {
-			$sort = "ORDER BY p.post_title ASC LIMIT 1";
+			$sort = "ORDER BY CAST(pm.meta_value AS DECIMAL(10,2)) ASC LIMIT 1";
 		}
-
+	
 		return $sort;
 	}
 
@@ -140,13 +141,13 @@ class WP_Radio_Hooks {
 
 	public function previous_post_sort( $sort ) {
 		global $post;
-
+	
 		if ( get_post_type( $post ) == 'wp_radio' ) {
-			$sort = "ORDER BY p.post_title DESC LIMIT 1";
+			$sort = "ORDER BY CAST(pm.meta_value AS DECIMAL(10,2)) DESC LIMIT 1";
 		}
-
+	
 		return $sort;
-	}
+	}	
 
 	public function previous_post_where( $where ) {
 		global $post, $wpdb;

@@ -8,11 +8,14 @@ $show_end   = ( $paginate * $perpage ) > $total ? $total : ( $paginate * $perpag
 $perpage_options = [ 5, 10, 15, 20, 30, 50 ];
 
 $sort_options = [
-	'asc'       => __( 'A -Z', 'wp-radio' ),
-	'desc'      => __( 'Z -A', 'wp-radio' ),
-	'date_desc' => __( 'Newest', 'wp-radio' ),
-	'date_asc'  => __( 'Oldest', 'wp-radio' ),
+    'asc'        => __( 'A - Z', 'wp-radio' ),
+    'desc'       => __( 'Z - A', 'wp-radio' ),
+    'date_desc'  => __( 'Newest', 'wp-radio' ),
+    'date_asc'   => __( 'Oldest', 'wp-radio' ),
+    'rate_asc'   => __( 'Frequency: Low to High', 'wp-radio' ),
+    'rate_desc'  => __( 'Frequency: High to Low', 'wp-radio' ),
 ];
+
 
 ?>
 
